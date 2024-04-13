@@ -19,7 +19,7 @@
    
  اذا لم يكن لديك حساب من قبل [اضغط هنا](https://account.mongodb.com/account/register?n=https%3A%2F%2Fcloud.mongodb.com%2Fv2%2F65ff6342cc9603618392b53d&nextHash=%23metrics%2FreplicaSet%2F65ff644153e99521f36752b1%2Fexplorer%2Ftest%2Fposts%2Ffind&signedOut=true) وانشئ واحدا. 
  
-  [طريقة الإنشاء](https://youtu.be/a_nUiUY6JOs?si=7Ukpog16JXxkzUmK) لا تشاهد الفيديو للاخر، فقط نريد انشاء رابط تخزين ثم قم بوضعه .
+  [طريقة الإنشاء](https://youtu.be/a_nUiUY6JOs?si=7Ukpog16JXxkzUmK) لا تشاهد الفيديو للاخر، فقط نريد انشاء رابط تخزين ثم قم بوضعه [هنا](https://github.com/BK9-dev/BK9-SHORT/blob/1d6321d82d497e55f7c7cda12de3ad6646d7bff0/BK9.env#L1).
 
 
   
