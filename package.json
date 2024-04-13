@@ -1,0 +1,16 @@
+{
+  "name": "bk9",
+  "version": "1.0.0",
+  "description": "URL shortener application",
+  "main": "BK9.js",
+  "scripts": {
+    "start": "node BK9.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "nanoid": "^3.1.23",
+    "dotenv": "^16.4.5"
+
+  }
+}

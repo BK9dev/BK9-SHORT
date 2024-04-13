@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="BK9.css">
+  <title id="title">BK9 <3</title>
+</head>
+<body>
+  <h1 id="header">اختصار الروابط</h1>
+  
+  <form id="urlForm">
+    <label for="longURL" id="longURLLabel">أدخل الرابط الطويل:</label><br>
+    <input type="text" id="longURL" name="longURL" required><br>
+    <label for="alias" id="aliasLabel">اسم الرابط المخصص (اختياري):</label><br>
+    <input type="text" id="alias" name="alias"><br>
+    <button type="submit" id="submitButton">تقصير الرابط</button>
+  </form>
+
+  <div id="shortenedURL">
+    <p id="shortenedURLText"><span id="BK9">الرابط المختصر:</span> <a id="shortURL" href="#" target="_blank"></a></p>
+    <span id="BK9bt" class="material-symbols-rounded" onclick="copyShortURL()">نسخ</span>
+  </div>
+
+  <script>
+    const arText = {
+      title: 'BK9 <3 ',
+      header: 'اختصار الروابط',
+      longURLLabel: 'أدخل الرابط الطويل:',
+      aliasLabel: 'اسم الرابط المخصص (اختياري):',
+      submitButton: 'تقصير الرابط',
+      BK9: 'الرابط المختصر:',
+      BK9bt: 'نسخ',
+      BK9done: 'تم نسخ الرابط المختصر إلى الحافظة!',
+      BK9err: 'اسم التخصيص ماخوذ جرب اسما اخر.'
+    };
+
+    function setLanguage(language) {
+      document.title = language.title;
+      document.getElementById('header').innerText = language.header;
+      document.getElementById('longURLLabel').innerText = language.longURLLabel;
+      document.getElementById('aliasLabel').innerText = language.aliasLabel;
+      document.getElementById('submitButton').innerText = language.submitButton;
+      document.getElementById('BK9').innerText = language.BK9;
+      document.getElementById('BK9bt').innerText = language.BK9bt;
+      document.documentElement.dir = 'rtl';
+    }
+
+document.getElementById('urlForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const longURL = document.getElementById('longURL').value;
+  let alias = document.getElementById('alias').value; 
+
+  const response = await fetch('/api/BK9', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ longURL, alias })
+  });
+  const data = await response.json();
+
+  if (response.ok) {
+    document.getElementById('shortURL').setAttribute('href', data.shortURL);
+    document.getElementById('shortURL').innerText = data.shortURL;
+  } else {
+    if (data.message === 'اسم التخصيص ماخوذ جرب اسما اخر.') {
+      alert(arText.BK9err);
+    } else {
+      document.getElementById('shortenedURLText').innerHTML = `<p>${data.message}</p>`;
+    }
+  }
+});
+
+
+
+    function copyShortURL() {
+      const shortURL = document.getElementById('shortURL').innerText;
+
+      navigator.clipboard.writeText(shortURL).then(() => {
+        alert(arText.BK9done);
+      }).catch(error => {
+        console.error('Error:', error);
+        alert(arText.BK9err);
+      });
+    }
+
+// اذا واجهت اي مشكله ادخل قناة المطور واخبره بالمشكلة: https://whatsapp.com/channel/0029VaGPfAx17En4dklujt3n 
+
+    setLanguage(arText);
+  </script>
+</body>
+</html>

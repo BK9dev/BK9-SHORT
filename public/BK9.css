@@ -1,0 +1,95 @@
+/* اذا واجهت اي مشكله ادخل قناة المطور واخبره بالمشكلة: https://whatsapp.com/channel/0029VaGPfAx17En4dklujt3n  
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 1;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#shortenedURL {
+  text-align: center;
+}
+
+#error {
+  color: red;
+  text-align: center;
+}
+
+#BK9bt {
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+#BK9bt:hover {
+  color: #0056b3;
+}
+
+#languageContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#changeLanguageButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#changeLanguageButton:hover {
+  background-color: #0056b3;
+}
+
