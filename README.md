@@ -46,5 +46,7 @@
 
 اذا اعجبك الموقع ضع نجمة للملف فوق.
 
+عدد الزائرين :
+
 <p align="center"><img src="https://profile-counter.glitch.me/{BK9-dev}/count.svg" alt="BK9-dev :: Visitor's Count" /></p>
 
