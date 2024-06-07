@@ -10,7 +10,7 @@
 ---
 **1.  الخطوة الاولى:**
 
-قم باخذ الملف عندك [اضغط هنا](https://github.com/BK9-dev/BK9-SHORT/fork) ثم اضغط على create fork.
+قم باخذ الملف عندك [اضغط هنا](https://github.com/BK9dev/BK9-SHORT/fork) ثم اضغط على create fork.
 
 
 **2.  الخطوة الثانية:**
